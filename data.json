@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "price": 499,
+    "category": "Ideas & growth",
+    "description": "Small changes, remarkable results. A practical guide to building habits that last.",
+    "image": "/download.jpg"
+  },
+  {
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "price": 399,
+    "category": "Fiction",
+    "description": "A fable about listening to your heart and following the road only you can take.",
+    "image": "/images.jpg"
+  },
+  {
+    "title": "Rich Dad Poor Dad",
+    "author": "Robert T. Kiyosaki",
+    "price": 450,
+    "category": "Ideas & growth",
+    "description": "A fresh perspective on money, work, and the lessons we learn growing up.",
+    "image": "/images1.jpg"
+  },
+  {
+    "title": "The Midnight Library",
+    "author": "Matt Haig",
+    "price": 525,
+    "category": "Fiction",
+    "description": "Between life and death there is a library, and within it, a chance to try again.",
+    "image": "/images3.jpg"
+  },
+  {
+    "title": "The Creative Act",
+    "author": "Rick Rubin",
+    "price": 699,
+    "category": "Art & making",
+    "description": "A generous meditation on what it means to make things and stay open to ideas.",
+    "image": "/images4.jpg"
+  },
+  {
+    "title": "A Man Called Ove",
+    "author": "Fredrik Backman",
+    "price": 475,
+    "category": "Fiction",
+    "description": "A funny, tender story about an unlikely friendship and a life turned around.",
+    "image": "/images5.jpg"
+  }
+]

@@ -1,0 +1,60 @@
+.storefront { width: min(1180px, 100%); margin: 0 auto; padding: 0 48px; }
+.topbar { min-height: 76px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+.wordmark { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: Georgia, serif; font-size: 21px; font-weight: 700; }
+.wordmark-mark { display: grid; place-items: center; width: 32px; aspect-ratio: 1; color: var(--paper); background: var(--ink); border-radius: 50%; font-family: Georgia, serif; font-size: 16px; }
+.topbar-note, .topbar-link { font-size: 12px; letter-spacing: 0.7px; text-transform: uppercase; }
+.topbar-note { color: var(--muted); }
+.topbar-link { text-decoration: none; }
+.topbar-link span { color: var(--accent); font-size: 16px; padding-left: 5px; }
+
+.intro { min-height: 346px; display: flex; align-items: center; justify-content: space-between; position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
+.intro-copy { max-width: 630px; padding: 42px 0 48px; animation: arrive 650ms ease-out both; }
+.eyebrow { margin: 0 0 14px; color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; }
+.intro h1 { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(48px, 6vw, 76px); font-weight: 400; line-height: 0.99; }
+.intro h1 em { color: var(--accent); font-weight: 400; }
+.intro-description { max-width: 420px; margin: 21px 0 0; color: var(--muted); font-size: 15px; }
+.intro-stamp { width: 148px; height: 148px; display: grid; align-content: center; justify-content: center; position: relative; margin-right: 7%; border: 1px solid #c7cabb; border-radius: 50%; color: var(--ink); font-family: Georgia, serif; font-size: 16px; line-height: 1.15; text-align: center; transform: rotate(9deg); }
+.stamp-star { position: absolute; top: 8px; right: 14px; color: var(--accent); font-size: 27px; }
+
+.collection { padding: 48px 0 72px; }
+.collection-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; }
+.collection-heading .eyebrow { margin-bottom: 7px; }
+.collection h2 { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: 32px; font-weight: 400; }
+.search-box { width: min(290px, 100%); min-height: 42px; display: flex; align-items: center; gap: 9px; padding: 0 12px; border: 1px solid var(--line); background: rgba(255,255,255,0.55); }
+.search-icon { color: var(--accent); font-size: 23px; line-height: 1; }
+.search-box input { width: 100%; border: 0; outline: 0; color: var(--ink); background: transparent; font-size: 13px; }
+.search-box input::placeholder { color: #898d82; }
+.search-box:focus-within { outline: 2px solid #bd583d55; outline-offset: 2px; }
+.category-tabs { display: flex; gap: 8px; overflow-x: auto; padding: 25px 0 22px; }
+.category-tab { flex: 0 0 auto; padding: 7px 13px; border: 1px solid var(--line); border-radius: 99px; background: transparent; color: var(--muted); cursor: pointer; font-size: 12px; transition: background 160ms ease, color 160ms ease, border-color 160ms ease; }
+.category-tab:hover, .category-tab.is-active { border-color: var(--ink); background: var(--ink); color: #f6f4ed; }
+.book-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 23px; }
+.empty-state { padding: 48px 0; color: var(--muted); text-align: center; }
+.site-footer { min-height: 62px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; letter-spacing: 0.5px; text-transform: uppercase; }
+
+@keyframes arrive { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 760px) {
+  .storefront { padding: 0 24px; }
+  .topbar { min-height: 66px; }
+  .topbar-note { display: none; }
+  .intro { min-height: 310px; }
+  .intro-stamp { width: 105px; height: 105px; margin-right: 1%; font-size: 12px; }
+  .stamp-star { font-size: 21px; }
+  .book-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 15px; }
+  .collection { padding-top: 38px; }
+}
+
+@media (max-width: 520px) {
+  .storefront { padding: 0 18px; }
+  .topbar-link { font-size: 10px; letter-spacing: 0.3px; }
+  .intro { min-height: 285px; }
+  .intro h1 { font-size: 49px; }
+  .intro-description { max-width: 285px; font-size: 14px; }
+  .intro-stamp { position: absolute; right: 0; bottom: 22px; width: 69px; height: 69px; font-size: 9px; opacity: 0.85; }
+  .stamp-star { top: 0; right: 6px; font-size: 16px; }
+  .collection-heading { align-items: stretch; flex-direction: column; gap: 17px; }
+  .collection h2 { font-size: 28px; }
+  .search-box { width: 100%; }
+  .book-grid { grid-template-columns: 1fr; }
+}
