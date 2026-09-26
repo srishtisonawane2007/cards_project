@@ -1,0 +1,22 @@
+.topbar { min-height: 76px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+.wordmark { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: Georgia, serif; font-size: 21px; font-weight: 700; }
+.wordmark-mark { display: grid; place-items: center; width: 32px; aspect-ratio: 1; color: var(--paper); background: var(--ink); border-radius: 50%; font-family: Georgia, serif; font-size: 16px; }
+.topbar-note, .topbar-link { font-size: 12px; letter-spacing: 0.7px; text-transform: uppercase; }
+.topbar-note { color: var(--muted); }
+.topbar-nav { display: flex; align-items: center; gap: 24px; }
+.topbar-nav > a:not(.topbar-link) { font-size: 11px; text-decoration: none; text-transform: uppercase; }
+.topbar-link { text-decoration: none; }
+.topbar-link span { color: var(--accent); font-size: 16px; padding-left: 5px; }
+
+@media (max-width: 760px) {
+  .topbar { min-height: 66px; }
+  .topbar-note { display: none; }
+  .topbar-nav { gap: 14px; }
+  .topbar-nav > a { font-size: 10px; }
+}
+
+@media (max-width: 520px) {
+  .topbar-link { font-size: 10px; letter-spacing: 0.3px; }
+  .topbar-nav { gap: 10px; }
+  .topbar-nav > a { font-size: 9px; }
+}

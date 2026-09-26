@@ -2,8 +2,12 @@ import { useState } from 'react'
 import './App.css'
 import books from '../data.json'
 import BookCard from './components/BookCard/BookCard.jsx'
+import About from './components/About/About.jsx'
+import Contact from './components/Contact/Contact.jsx'
+import Header from './components/Header/Header.jsx'
+import Footer from './components/Footer/Footer.jsx'
 
-function App() {
+function BookshopHome() {
   const [query, setQuery] = useState('')
   const [activeCategory, setActiveCategory] = useState('All books')
   const categories = ['All books', ...new Set(books.map((book) => book.category))]
@@ -14,16 +18,7 @@ function App() {
   })
 
   return (
-    <main className="storefront">
-      <header className="topbar">
-        <a className="wordmark" href="#top" aria-label="Paper Trail home">
-          <span className="wordmark-mark" aria-hidden="true">P.</span>
-          paper trail
-        </a>
-        <span className="topbar-note">Independent books, thoughtfully found</span>
-        <a className="topbar-link" href="#collection">Browse the collection <span aria-hidden="true">↘</span></a>
-      </header>
-
+    <>
       <section className="intro" id="top">
         <div className="intro-copy">
           <p className="eyebrow">A little room for a good book</p>
@@ -76,11 +71,23 @@ function App() {
           <p className="empty-state">No books found. Try another title or category.</p>
         )}
       </section>
+    </>
+  )
+}
 
-      <footer className="site-footer">
-        <span>Paper Trail Bookshop</span>
-        <span>Good books. No hurry.</span>
-      </footer>
+function App() {
+  const route = window.location.pathname.replace(/\/+$/, '') || '/'
+  const page = route === '/about'
+    ? <About />
+    : route === '/contact'
+      ? <Contact />
+      : <BookshopHome />
+
+  return (
+    <main className="storefront">
+      <Header />
+      {page}
+      <Footer />
     </main>
   )
 }

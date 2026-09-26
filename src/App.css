@@ -1,12 +1,4 @@
 .storefront { width: min(1180px, 100%); margin: 0 auto; padding: 0 48px; }
-.topbar { min-height: 76px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
-.wordmark { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: Georgia, serif; font-size: 21px; font-weight: 700; }
-.wordmark-mark { display: grid; place-items: center; width: 32px; aspect-ratio: 1; color: var(--paper); background: var(--ink); border-radius: 50%; font-family: Georgia, serif; font-size: 16px; }
-.topbar-note, .topbar-link { font-size: 12px; letter-spacing: 0.7px; text-transform: uppercase; }
-.topbar-note { color: var(--muted); }
-.topbar-link { text-decoration: none; }
-.topbar-link span { color: var(--accent); font-size: 16px; padding-left: 5px; }
-
 .intro { min-height: 346px; display: flex; align-items: center; justify-content: space-between; position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
 .intro-copy { max-width: 630px; padding: 42px 0 48px; animation: arrive 650ms ease-out both; }
 .eyebrow { margin: 0 0 14px; color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; }
@@ -30,14 +22,11 @@
 .category-tab:hover, .category-tab.is-active { border-color: var(--ink); background: var(--ink); color: #f6f4ed; }
 .book-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 23px; }
 .empty-state { padding: 48px 0; color: var(--muted); text-align: center; }
-.site-footer { min-height: 62px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; letter-spacing: 0.5px; text-transform: uppercase; }
 
 @keyframes arrive { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 
 @media (max-width: 760px) {
   .storefront { padding: 0 24px; }
-  .topbar { min-height: 66px; }
-  .topbar-note { display: none; }
   .intro { min-height: 310px; }
   .intro-stamp { width: 105px; height: 105px; margin-right: 1%; font-size: 12px; }
   .stamp-star { font-size: 21px; }
@@ -47,7 +36,6 @@
 
 @media (max-width: 520px) {
   .storefront { padding: 0 18px; }
-  .topbar-link { font-size: 10px; letter-spacing: 0.3px; }
   .intro { min-height: 285px; }
   .intro h1 { font-size: 49px; }
   .intro-description { max-width: 285px; font-size: 14px; }
